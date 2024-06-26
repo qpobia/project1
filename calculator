@@ -1,0 +1,35 @@
+#include <iostream>
+int main() {
+    float num1, num2;
+    char op;
+    while (true) { 
+        std::cout << "Enter first number:\n";
+        std::cin >> num1;
+        std::cout << "Enter operator (+, -, *, /): ";
+        std::cin >> op;
+        std::cout << "Enter second number: ";
+        std::cin >> num2;
+        switch(op) {
+            case '+':
+                std::cout << "Result: " << num1 + num2;
+                break;
+            case '-':
+                std::cout << "Result: " << num1 - num2;
+                break;
+            case '*':
+                std::cout << "Result: " << num1 * num2;
+                break;
+            case '/':
+                if(num2 != 0)
+                    std::cout << "Result: " << num1 / num2;
+                else
+                    std::cout << "Error: division by zero";
+                break;
+            default:
+                std::cout << "Invalid operator";
+        }
+    }
+
+    return 0;
+}
+
